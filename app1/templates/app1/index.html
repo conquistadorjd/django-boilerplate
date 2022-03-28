@@ -1,0 +1,57 @@
+{% extends 'app1/base.html' %}
+{% block content %}
+    <div class="row g-5">
+        <div class="col-1"></div>
+        <div class="col-md-8">
+          <!-- <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            From the Firehose
+          </h3> -->
+            <!-- {% for quote in context %}
+                <article class="blog-post">
+                    <h4 class="blog-post-title"><a href="/{{quote.quote_slug}}">{{ quote.quote_title}}</a></h4>
+                </article>
+            {% endfor %} -->
+            {{context}}
+        <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for quote in context %}
+                <div class="col">
+                <div class="card">
+                      <img src="{{ quote.img_ext_url}}" class="card-img-top" alt="...">                
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <p>{{quote.content|safe }}</p>
+                          <footer class="blockquote-footer"> <cite title="Source Title">{{ quote.author}}</cite></footer>
+                        </blockquote>
+                      </div>                    
+                </div>
+                </div>
+                {% endfor %}
+        </div> -->
+
+        </div>
+        <div class="col-md-3">
+            <div class="position-sticky" style="top: 2rem;">
+              <!-- <div class="p-4 mb-3 bg-light rounded">
+                <h4 class="fst-italic">About</h4>
+                <p class="mb-0">I started this blog to keep my notes handy and also to share my notes with my fellow developers.</p>
+              </div> -->
+      
+              <div class="p-3">
+                <h4 class=".fs-3 text ">Tags</h4>
+                <ol class="list-unstyled mb-0">
+                  {% for tag in tags %}
+                    <li><a href="/tag/{{tag.tag_slug}}">{{tag.tag_name}}</a></li>
+                  {% endfor %} 
+                </ol>
+              </div>
+      
+              <div class="p-3">
+                <h4 class=".fs-1 text">Elsewhere</h4>
+                <ol class="list-unstyled">
+                  <li><a href="https://github.com/conquistadorjd" target="_blank">GitHub</a></li>
+                  <li><a href="#" target="_blank">Twitter</a></li>
+                </ol>
+              </div>
+            </div>        
+    </div>
+{% endblock %}
